@@ -1,0 +1,372 @@
+{"type":["init_ps"],"time":["2022-05-13 13:15:34"],"user":["Burhan Hodzic"],"umph":[1652440534.2575],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:15:34"],"user":["Burhan Hodzic"],"umph":[1652440534.3879],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(tidyverse)\nlibrary (broom)\nlibrary (janitor)\nlibrary (DiagrammeR)\nlibrary (skimr)\nlibrary (dplyr)\nlibrary (wooldridge)\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:15:34"],"user":["Burhan Hodzic"],"umph":[1652440534.4226],"ok":[false],"chunk":[2],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:22:16"],"user":["Burhan Hodzic"],"umph":[1652440936.8825],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:22:16"],"user":["Burhan Hodzic"],"umph":[1652440936.9584],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:22:17"],"user":["Burhan Hodzic"],"umph":[1652440937.0017],"ok":[false],"chunk":[2],"ex":[1],"e.ind":[1],"code":["\n4\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:22:42"],"user":["Burhan Hodzic"],"umph":[1652440962.5075],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:22:42"],"user":["Burhan Hodzic"],"umph":[1652440962.5431],"ok":[false],"chunk":[2],"ex":[1],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:23:02"],"user":["Burhan Hodzic"],"umph":[1652440982.4626],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:23:02"],"user":["Burhan Hodzic"],"umph":[1652440982.4994],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n\"nein\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:23:07"],"user":["Burhan Hodzic"],"umph":[1652440987.2425],"ok":[false],"chunk":[3],"ex":[1],"e.ind":[2],"code":["thp <- read_csv(\"./data/THP_clean.csv\") %>%\n  select(newid, uc, depressed_1y, treat, age_baseline, age_baseline_sq, kids_no, famstruct_baseline, grandmother_baseline, edu_mo, edu_fa, employed_mo_baseline, incomeindex, depindex_0, mspss_tot)\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_c."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:33:37"],"user":["Burhan Hodzic"],"umph":[1652441617.7337],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:33:41"],"user":["Burhan Hodzic"],"umph":[1652441621.0045],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["thp <- read_csv(\"./data/THP_clean.csv\") %>%\n  select(newid, uc, depressed_1y, treat, age_baseline, age_baseline_sq, kids_no, famstruct_baseline, grandmother_baseline, edu_mo, edu_fa, employed_mo_baseline, incomeindex, depindex_0, mspss_tot)\n\nskim(thp)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:33:41"],"user":["Burhan Hodzic"],"umph":[1652441621.0452],"ok":[false],"chunk":[4],"ex":[1],"e.ind":[1],"code":["thp_plots <- thp %>%\n  mutate(treat_factor = as.factor(ifelse(treat == 1 , \"Treatment\", \"Kontrolle\")),\n         depressed = as.factor(ifelse(depressed_1y == 0, \"keine Depressionen\", \"Depressionen\"))) %>%\n  filter( !is.na(depressed)) \n#plot_prop_depression <- ggplot(___, aes(x = ___, fill = ___)) +\n#  geom_bar(position = \"fill\") +\n#  labs(x = NULL, y = \"Anteil an Depressionen\", fill = NULL) +\n#  scale_fill_manual(values = c(\"darkblue\", \"darkred\"))\n\n#plot_prop_depression\n\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to plot_prop_depression in chunk 1_d."]}
+,
+{"type":["hint"],"time":["2022-05-13 13:43:07"],"user":["Burhan Hodzic"],"umph":[1652442187.7701],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:45:34"],"user":["Burhan Hodzic"],"umph":[1652442334.605],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:45:35"],"user":["Burhan Hodzic"],"umph":[1652442335.008],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["thp_plots <- thp %>%\n  mutate(treat_factor = as.factor(ifelse(treat == 1 , \"Treatment\", \"Kontrolle\")),\n         depressed = as.factor(ifelse(depressed_1y == 0, \"keine Depressionen\", \"Depressionen\"))) %>%\n  filter( !is.na(depressed))\n\nplot_prop_depression <- ggplot(thp_plots, aes(x = depressed, fill = treat_factor)) +\n  geom_bar(position = \"fill\") +\n  labs(x = NULL, y = \"Anteil an Depressionen\", fill = NULL) +\n  scale_fill_manual(values = c(\"darkblue\", \"darkred\"))\n\nplot_prop_depression\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:45:35"],"user":["Burhan Hodzic"],"umph":[1652442335.0416],"ok":[false],"chunk":[5],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_e."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:46:13"],"user":["Burhan Hodzic"],"umph":[1652442373.8566],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:46:13"],"user":["Burhan Hodzic"],"umph":[1652442373.8937],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["\n\"ja\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:46:13"],"user":["Burhan Hodzic"],"umph":[1652442373.9279],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_f."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:46:44"],"user":["Burhan Hodzic"],"umph":[1652442404.8936],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:46:44"],"user":["Burhan Hodzic"],"umph":[1652442404.9287],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["\n\"überschätzen\"\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_f."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:47:05"],"user":["Burhan Hodzic"],"umph":[1652442425.7052],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:47:05"],"user":["Burhan Hodzic"],"umph":[1652442425.7449],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["\n\"unterschätzen\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:47:05"],"user":["Burhan Hodzic"],"umph":[1652442425.997],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["thp %>% \n  pivot_longer(cols = -treat, names_to = \"variable\", values_to = \"value\") %>%\n  group_nest(variable) %>%\n  mutate(t.test = map(data, ~tidy(t.test(value ~ treat, data = .x)))) %>%\n  unnest(t.test) %>%\n  mutate( Mean_Treatment = round(estimate2, 2),\n          Mean_Kontrolle = round(estimate1, 2),\n    Differenz = round(estimate, 4),\n          Signifikanz = round(p.value,4)) %>%\n  select(variable, Mean_Treatment, Mean_Kontrolle, Differenz, Signifikanz)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:47:06"],"user":["Burhan Hodzic"],"umph":[1652442426.0398],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:50:29"],"user":["Burhan Hodzic"],"umph":[1652442629.3129],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:50:29"],"user":["Burhan Hodzic"],"umph":[1652442629.386],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n4\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["hint"],"time":["2022-05-13 13:50:35"],"user":["Burhan Hodzic"],"umph":[1652442635.5901],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:51:54"],"user":["Burhan Hodzic"],"umph":[1652442714.4553],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:51:54"],"user":["Burhan Hodzic"],"umph":[1652442714.5148],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n1\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["hint"],"time":["2022-05-13 13:52:03"],"user":["Burhan Hodzic"],"umph":[1652442723.4226],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:52:12"],"user":["Burhan Hodzic"],"umph":[1652442732.3508],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:52:12"],"user":["Burhan Hodzic"],"umph":[1652442732.3894],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n1\n\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:52:18"],"user":["Burhan Hodzic"],"umph":[1652442738.2784],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:52:18"],"user":["Burhan Hodzic"],"umph":[1652442738.3186],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n2\n\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-13 13:52:26"],"user":["Burhan Hodzic"],"umph":[1652442746.3775],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:52:26"],"user":["Burhan Hodzic"],"umph":[1652442746.4173],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["\n3\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-13 13:52:26"],"user":["Burhan Hodzic"],"umph":[1652442746.4878],"ok":[false],"chunk":[9],"ex":[1],"e.ind":[3],"code":["reg1 <- lm(depressed_1y ~ treat, data=thp)\nreg2 <- lm(depressed_1y ~ treat + depindex_0, data=thp)\n\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg3 in chunk 1_h."]}
+,
+{"type":["init_ps"],"time":["2022-05-16 17:41:59"],"user":["Burhan Hodzic"],"umph":[1652715719.983],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:00"],"user":["Burhan Hodzic"],"umph":[1652715720.3622],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:00"],"user":["Burhan Hodzic"],"umph":[1652715720.3895],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n\"nein\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:03"],"user":["Burhan Hodzic"],"umph":[1652715723.8689],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["thp <- read_csv(\"./data/THP_clean.csv\") %>%\n  select(newid, uc, depressed_1y, treat, age_baseline, age_baseline_sq, kids_no, famstruct_baseline, grandmother_baseline, edu_mo, edu_fa, employed_mo_baseline, incomeindex, depindex_0, mspss_tot)\n\nskim(thp)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:04"],"user":["Burhan Hodzic"],"umph":[1652715724.3677],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["thp_plots <- thp %>%\n  mutate(treat_factor = as.factor(ifelse(treat == 1 , \"Treatment\", \"Kontrolle\")),\n         depressed = as.factor(ifelse(depressed_1y == 0, \"keine Depressionen\", \"Depressionen\"))) %>%\n  filter( !is.na(depressed))\n\nplot_prop_depression <- ggplot(thp_plots, aes(x = depressed, fill = treat_factor)) +\n  geom_bar(position = \"fill\") +\n  labs(x = NULL, y = \"Anteil an Depressionen\", fill = NULL) +\n  scale_fill_manual(values = c(\"darkblue\", \"darkred\"))\n\nplot_prop_depression\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:04"],"user":["Burhan Hodzic"],"umph":[1652715724.3962],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["\n\"ja\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:04"],"user":["Burhan Hodzic"],"umph":[1652715724.4228],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["\n\"unterschätzen\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:04"],"user":["Burhan Hodzic"],"umph":[1652715724.8738],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["thp %>% \n  pivot_longer(cols = -treat, names_to = \"variable\", values_to = \"value\") %>%\n  group_nest(variable) %>%\n  mutate(t.test = map(data, ~tidy(t.test(value ~ treat, data = .x)))) %>%\n  unnest(t.test) %>%\n  mutate( Mean_Treatment = round(estimate2, 2),\n          Mean_Kontrolle = round(estimate1, 2),\n    Differenz = round(estimate, 4),\n          Signifikanz = round(p.value,4)) %>%\n  select(variable, Mean_Treatment, Mean_Kontrolle, Differenz, Signifikanz)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:04"],"user":["Burhan Hodzic"],"umph":[1652715724.8921],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:42:04"],"user":["Burhan Hodzic"],"umph":[1652715724.9527],"ok":[false],"chunk":[9],"ex":[1],"e.ind":[3],"code":["reg1 <- lm(depressed_1y ~ treat, data=thp)\nreg2 <- lm(depressed_1y ~ treat + depindex_0, data=thp)\n\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg3 in chunk 1_h."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 17:43:27"],"user":["Burhan Hodzic"],"umph":[1652715807.9743],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:43:28"],"user":["Burhan Hodzic"],"umph":[1652715808.0875],"ok":[false],"chunk":[9],"ex":[1],"e.ind":[3],"code":["reg1 <- lm(depressed_1y ~ treat, data=thp)\nreg2 <- lm(depressed_1y ~ treat + depindex_0, data=thp)\n\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg3 in chunk 1_h."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 17:44:06"],"user":["Burhan Hodzic"],"umph":[1652715846.9243],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:44:06"],"user":["Burhan Hodzic"],"umph":[1652715846.9802],"ok":[false],"chunk":[9],"ex":[1],"e.ind":[3],"code":["reg1 <- lm(depressed_1y ~ treat, data=thp)\nreg2 <- lm(depressed_1y ~ treat + depindex_0, data=thp)\n\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg3 in chunk 1_h."]}
+,
+{"type":["hint"],"time":["2022-05-16 17:48:07"],"user":["Burhan Hodzic"],"umph":[1652716087.1173],"ok":[true],"chunk":[9],"ex":[1],"e.ind":[3]}
+,
+{"type":["hint"],"time":["2022-05-16 17:48:19"],"user":["Burhan Hodzic"],"umph":[1652716099.4651],"ok":[true],"chunk":[9],"ex":[1],"e.ind":[3]}
+,
+{"type":["hint"],"time":["2022-05-16 17:48:27"],"user":["Burhan Hodzic"],"umph":[1652716107.8704],"ok":[true],"chunk":[9],"ex":[1],"e.ind":[3]}
+,
+{"type":["check_ps"],"time":["2022-05-16 17:51:42"],"user":["Burhan Hodzic"],"umph":[1652716302.8965],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:51:42"],"user":["Burhan Hodzic"],"umph":[1652716302.976],"ok":[true],"chunk":[9],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(depressed_1y ~ treat, data=thp)\nreg2 <- lm(depressed_1y ~ treat + depindex_0, data=thp)\n\nreg3 <- lm(depressed_1y ~ treat + depindex_0 + age_baseline + age_baseline_sq + kids_no + famstruct_baseline + grandmother_baseline + edu_mo + edu_fa + employed_mo_baseline + incomeindex + mspss_tot, data=thp)\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:51:43"],"user":["Burhan Hodzic"],"umph":[1652716303.0015],"ok":[true],"chunk":[10],"ex":[1],"e.ind":[0],"code":["stargazer( reg1, reg2, reg3 ,type = \"text\",  digits=2, omit.stat = c(\"f\",\"ser\"))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 17:51:43"],"user":["Burhan Hodzic"],"umph":[1652716303.027],"ok":[false],"chunk":[11],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_i_2."]}
+,
+{"type":["hint"],"time":["2022-05-16 17:51:58"],"user":["Burhan Hodzic"],"umph":[1652716318.323],"ok":[true],"chunk":[11],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:03:25"],"user":["Burhan Hodzic"],"umph":[1652717005.9068],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 18:03:25"],"user":["Burhan Hodzic"],"umph":[1652717005.9441],"ok":[true],"chunk":[11],"ex":[1],"e.ind":[0],"code":["\nc(2,4)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 18:03:25"],"user":["Burhan Hodzic"],"umph":[1652717005.982],"ok":[false],"chunk":[12],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_j."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:05:38"],"user":["Burhan Hodzic"],"umph":[1652717138.1113],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 18:05:38"],"user":["Burhan Hodzic"],"umph":[1652717138.1429],"ok":[false],"chunk":[12],"ex":[1],"e.ind":[1],"code":["\n1\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_j."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:06:37"],"user":["Burhan Hodzic"],"umph":[1652717197.6624],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 18:06:37"],"user":["Burhan Hodzic"],"umph":[1652717197.6898],"ok":[false],"chunk":[12],"ex":[1],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_j."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:06:46"],"user":["Burhan Hodzic"],"umph":[1652717206.2928],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 18:06:46"],"user":["Burhan Hodzic"],"umph":[1652717206.3251],"ok":[true],"chunk":[12],"ex":[1],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:13:36"],"user":["Burhan Hodzic"],"umph":[1652717616.3374],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:17:17"],"user":["Burhan Hodzic"],"umph":[1652717837.4856],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:17:32"],"user":["Burhan Hodzic"],"umph":[1652717852.2239],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:18:24"],"user":["Burhan Hodzic"],"umph":[1652717904.6627],"ok":[true]}
+,
+{"type":["hint"],"time":["2022-05-16 18:18:31"],"user":["Burhan Hodzic"],"umph":[1652717911.1061],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[3]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:18:58"],"user":["Burhan Hodzic"],"umph":[1652717938.1187],"ok":[true]}
+,
+{"type":["hint"],"time":["2022-05-16 18:19:09"],"user":["Burhan Hodzic"],"umph":[1652717949.4871],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[3]}
+,
+{"type":["hint"],"time":["2022-05-16 18:19:12"],"user":["Burhan Hodzic"],"umph":[1652717952.6836],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[3]}
+,
+{"type":["hint"],"time":["2022-05-16 18:19:40"],"user":["Burhan Hodzic"],"umph":[1652717980.8276],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[3]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:19:53"],"user":["Burhan Hodzic"],"umph":[1652717993.3714],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:20:50"],"user":["Burhan Hodzic"],"umph":[1652718050.6888],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:21:08"],"user":["Burhan Hodzic"],"umph":[1652718068.3693],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:21:28"],"user":["Burhan Hodzic"],"umph":[1652718088.5093],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:28:33"],"user":["Burhan Hodzic"],"umph":[1652718513.4137],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:31:16"],"user":["Burhan Hodzic"],"umph":[1652718676.4869],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:33:36"],"user":["Burhan Hodzic"],"umph":[1652718816.4001],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:38:18"],"user":["Burhan Hodzic"],"umph":[1652719098.4811],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:41:51"],"user":["Burhan Hodzic"],"umph":[1652719311.541],"ok":[true]}
+,
+{"type":["check_ps"],"time":["2022-05-16 18:46:52"],"user":["Burhan Hodzic"],"umph":[1652719612.7869],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2022-05-16 19:01:41"],"user":["Burhan Hodzic"],"umph":[1652720501.8151],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:41"],"user":["Burhan Hodzic"],"umph":[1652720501.8721],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:41"],"user":["Burhan Hodzic"],"umph":[1652720501.8953],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n\"nein\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:44"],"user":["Burhan Hodzic"],"umph":[1652720504.5192],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["thp <- read_csv(\"./data/THP_clean.csv\") %>%\n  select(newid, uc, depressed_1y, treat, age_baseline, age_baseline_sq, kids_no, famstruct_baseline, grandmother_baseline, edu_mo, edu_fa, employed_mo_baseline, incomeindex, depindex_0, mspss_tot)\n\nskim(thp)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:44"],"user":["Burhan Hodzic"],"umph":[1652720504.8352],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["thp_plots <- thp %>%\n  mutate(treat_factor = as.factor(ifelse(treat == 1 , \"Treatment\", \"Kontrolle\")),\n         depressed = as.factor(ifelse(depressed_1y == 0, \"keine Depressionen\", \"Depressionen\"))) %>%\n  filter( !is.na(depressed))\n\nplot_prop_depression <- ggplot(thp_plots, aes(x = depressed, fill = treat_factor)) +\n  geom_bar(position = \"fill\") +\n  labs(x = NULL, y = \"Anteil an Depressionen\", fill = NULL) +\n  scale_fill_manual(values = c(\"darkblue\", \"darkred\"))\n\nplot_prop_depression\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:44"],"user":["Burhan Hodzic"],"umph":[1652720504.8599],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["\n\"ja\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:44"],"user":["Burhan Hodzic"],"umph":[1652720504.8865],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["\n\"unterschätzen\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:45"],"user":["Burhan Hodzic"],"umph":[1652720505.3542],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["thp %>% \n  pivot_longer(cols = -treat, names_to = \"variable\", values_to = \"value\") %>%\n  group_nest(variable) %>%\n  mutate(t.test = map(data, ~tidy(t.test(value ~ treat, data = .x)))) %>%\n  unnest(t.test) %>%\n  mutate( Mean_Treatment = round(estimate2, 2),\n          Mean_Kontrolle = round(estimate1, 2),\n    Differenz = round(estimate, 4),\n          Signifikanz = round(p.value,4)) %>%\n  select(variable, Mean_Treatment, Mean_Kontrolle, Differenz, Signifikanz)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:45"],"user":["Burhan Hodzic"],"umph":[1652720505.3782],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:45"],"user":["Burhan Hodzic"],"umph":[1652720505.4415],"ok":[true],"chunk":[9],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(depressed_1y ~ treat, data=thp)\nreg2 <- lm(depressed_1y ~ treat + depindex_0, data=thp)\n\nreg3 <- lm(depressed_1y ~ treat + depindex_0 + age_baseline + age_baseline_sq + kids_no + famstruct_baseline + grandmother_baseline + edu_mo + edu_fa + employed_mo_baseline + incomeindex + mspss_tot, data=thp)\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:46"],"user":["Burhan Hodzic"],"umph":[1652720506.4739],"ok":[true],"chunk":[10],"ex":[1],"e.ind":[0],"code":["stargazer( reg1, reg2, reg3 ,type = \"text\",  digits=2, omit.stat = c(\"f\",\"ser\"))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:46"],"user":["Burhan Hodzic"],"umph":[1652720506.4993],"ok":[true],"chunk":[11],"ex":[1],"e.ind":[0],"code":["\nc(2,4)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:46"],"user":["Burhan Hodzic"],"umph":[1652720506.5248],"ok":[true],"chunk":[12],"ex":[1],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:49"],"user":["Burhan Hodzic"],"umph":[1652720509.8435],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\nlibrary(AER)\ndata(Fertility)\nhead(Fertility)\nskim(Fertility)\n\nFertility\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:49"],"user":["Burhan Hodzic"],"umph":[1652720509.871],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:51"],"user":["Burhan Hodzic"],"umph":[1652720511.1173],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["Fertility <- Fertility %>%\n  mutate(work01 = case_when(work > 0 ~ 1,\n                            work == 0 ~ 0))\n\nreg1 <- lm(work01 ~ morekids, data=Fertility )\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:01:51"],"user":["Burhan Hodzic"],"umph":[1652720511.1431],"ok":[false],"chunk":[16],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_c."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:09:47"],"user":["Burhan Hodzic"],"umph":[1652720987.8683],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:09:47"],"user":["Burhan Hodzic"],"umph":[1652720987.9091],"ok":[false],"chunk":[16],"ex":[2],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_c."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:10:19"],"user":["Burhan Hodzic"],"umph":[1652721019.8324],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:10:19"],"user":["Burhan Hodzic"],"umph":[1652721019.8709],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:10:20"],"user":["Burhan Hodzic"],"umph":[1652721020.7883],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["grViz('digraph G {\n\nx [label=\"erklärende Variable x\"]\ny [label=\"abhängige Variable y\"]\nz [label=\"Instrument z\"]\n\nx -> y [label=\"+\"];\nz -> x [label=\"+\"];\nz -> y [label=\"+\"];\n}')"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:10:20"],"user":["Burhan Hodzic"],"umph":[1652721020.8746],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["grViz('digraph G {\n\nx [label=\"erklärende Variable x\"]\ny [label=\"abhängige Variable y\"]\nz [label=\"Instrument z\"]\n\nx -> y [label=\"-\"];\nz -> y [label=\"+\"];\n}')"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:10:21"],"user":["Burhan Hodzic"],"umph":[1652721021.004],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["grViz('digraph G {\n\nx [label=\"erklärende Variable x\"]\ny [label=\"abhängige Variable y\"]\nz [label=\"Instrument z\"]\n\nx -> y [label=\"-\"];\nz -> x [label=\"+\"];\n}')"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:10:21"],"user":["Burhan Hodzic"],"umph":[1652721021.0432],"ok":[false],"chunk":[20],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_d_4."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:17:39"],"user":["Burhan Hodzic"],"umph":[1652721459.4689],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:17:39"],"user":["Burhan Hodzic"],"umph":[1652721459.5028],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:17:41"],"user":["Burhan Hodzic"],"umph":[1652721461.16],"ok":[true],"chunk":[21],"ex":[2],"e.ind":[0],"code":["Fertility <- Fertility %>%\n  mutate(morekids = ifelse(morekids== \"yes\", 1, 0)) %>%\n  mutate(afam = ifelse(afam== \"yes\", 1, 0)) %>%\n  mutate(same_sex = ifelse(gender1== gender2, 1, 0))\n  \nreg1 <-  Fertility %>%\n  lm(morekids ~ gender2, data=.)\n\nreg2 <- Fertility %>%\n  lm(morekids ~ afam, data=.)\n\n reg3 <- Fertility %>%\n  lm(morekids ~ same_sex, data=.)\n\n stargazer(reg1, reg2, reg3, type = \"text\", digits=3)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:17:41"],"user":["Burhan Hodzic"],"umph":[1652721461.1843],"ok":[false],"chunk":[22],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:20:15"],"user":["Burhan Hodzic"],"umph":[1652721615.2288],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:20:15"],"user":["Burhan Hodzic"],"umph":[1652721615.2626],"ok":[false],"chunk":[22],"ex":[2],"e.ind":[1],"code":["\n2\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:20:21"],"user":["Burhan Hodzic"],"umph":[1652721621.1653],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:20:21"],"user":["Burhan Hodzic"],"umph":[1652721621.2],"ok":[false],"chunk":[22],"ex":[2],"e.ind":[1],"code":["\n1\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:20:26"],"user":["Burhan Hodzic"],"umph":[1652721626.1029],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:20:26"],"user":["Burhan Hodzic"],"umph":[1652721626.1393],"ok":[true],"chunk":[22],"ex":[2],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:20:26"],"user":["Burhan Hodzic"],"umph":[1652721626.7795],"ok":[true],"chunk":[23],"ex":[2],"e.ind":[0],"code":["\nivreg(work01 ~ morekids | same_sex, data = Fertility) %>% \n  summary(diagnostics=TRUE)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:20:27"],"user":["Burhan Hodzic"],"umph":[1652721627.4358],"ok":[true],"chunk":[24],"ex":[2],"e.ind":[0],"code":["\nivreg(work01 ~ morekids | same_sex, data = Fertility) %>% \n  summary()\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:20:27"],"user":["Burhan Hodzic"],"umph":[1652721627.4582],"ok":[false],"chunk":[25],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_f_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:55:40"],"user":["Burhan Hodzic"],"umph":[1652723740.4955],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:55:40"],"user":["Burhan Hodzic"],"umph":[1652723740.5339],"ok":[false],"chunk":[25],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_f_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:56:37"],"user":["Burhan Hodzic"],"umph":[1652723797.404],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:56:37"],"user":["Burhan Hodzic"],"umph":[1652723797.4427],"ok":[false],"chunk":[25],"ex":[2],"e.ind":[1],"code":["\n5\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_f_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:57:25"],"user":["Burhan Hodzic"],"umph":[1652723845.3102],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:57:25"],"user":["Burhan Hodzic"],"umph":[1652723845.3597],"ok":[false],"chunk":[25],"ex":[2],"e.ind":[1],"code":["\n1\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_f_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:57:32"],"user":["Burhan Hodzic"],"umph":[1652723852.1062],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:57:32"],"user":["Burhan Hodzic"],"umph":[1652723852.1453],"ok":[true],"chunk":[25],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:57:32"],"user":["Burhan Hodzic"],"umph":[1652723852.1739],"ok":[false],"chunk":[26],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:58:25"],"user":["Burhan Hodzic"],"umph":[1652723905.2688],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:58:25"],"user":["Burhan Hodzic"],"umph":[1652723905.3145],"ok":[false],"chunk":[26],"ex":[2],"e.ind":[1],"code":["\nc(3,4,5)\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:58:33"],"user":["Burhan Hodzic"],"umph":[1652723913.3257],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:58:33"],"user":["Burhan Hodzic"],"umph":[1652723913.3705],"ok":[false],"chunk":[26],"ex":[2],"e.ind":[1],"code":["\nc(3,4)\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_g."]}
+,
+{"type":["hint"],"time":["2022-05-16 19:58:38"],"user":["Burhan Hodzic"],"umph":[1652723918.0837],"ok":[true],"chunk":[26],"ex":[2],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2022-05-16 19:59:02"],"user":["Burhan Hodzic"],"umph":[1652723942.4608],"ok":[true],"chunk":[26],"ex":[2],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2022-05-16 19:59:05"],"user":["Burhan Hodzic"],"umph":[1652723945.364],"ok":[true],"chunk":[26],"ex":[2],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:59:15"],"user":["Burhan Hodzic"],"umph":[1652723955.7817],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:59:15"],"user":["Burhan Hodzic"],"umph":[1652723955.8279],"ok":[false],"chunk":[26],"ex":[2],"e.ind":[1],"code":["\nc(3)\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_g."]}
+,
+{"type":["hint"],"time":["2022-05-16 19:59:22"],"user":["Burhan Hodzic"],"umph":[1652723962.1504],"ok":[true],"chunk":[26],"ex":[2],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-16 19:59:53"],"user":["Burhan Hodzic"],"umph":[1652723993.6412],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 19:59:53"],"user":["Burhan Hodzic"],"umph":[1652723993.6789],"ok":[false],"chunk":[26],"ex":[2],"e.ind":[1],"code":["\nc(1,2,3,4,5)\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_g."]}
+,
+{"type":["hint"],"time":["2022-05-16 19:59:57"],"user":["Burhan Hodzic"],"umph":[1652723997.9536],"ok":[true],"chunk":[26],"ex":[2],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2022-05-16 20:00:09"],"user":["Burhan Hodzic"],"umph":[1652724009.8661],"ok":[true],"chunk":[26],"ex":[2],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-16 20:00:46"],"user":["Burhan Hodzic"],"umph":[1652724046.7199],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:00:46"],"user":["Burhan Hodzic"],"umph":[1652724046.7562],"ok":[false],"chunk":[26],"ex":[2],"e.ind":[1],"code":["\nc(4,5)\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 20:01:01"],"user":["Burhan Hodzic"],"umph":[1652724061.6191],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:01"],"user":["Burhan Hodzic"],"umph":[1652724061.6735],"ok":[false],"chunk":[26],"ex":[2],"e.ind":[1],"code":["\nc(1,2)\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-16 20:01:12"],"user":["Burhan Hodzic"],"umph":[1652724072.5971],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:12"],"user":["Burhan Hodzic"],"umph":[1652724072.6712],"ok":[true],"chunk":[26],"ex":[2],"e.ind":[0],"code":["\nc(1,2,3)\n"],"message":[""]}
+,
+{"type":["check_ps"],"time":["2022-05-16 20:01:29"],"user":["Burhan Hodzic"],"umph":[1652724089.9176],"ok":[true]}
+,
+{"type":["grade_ps"],"time":["2022-05-16 20:01:39"],"user":["Burhan Hodzic"],"umph":[1652724099.8173],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2022-05-16 20:01:39"],"user":["Burhan Hodzic"],"umph":[1652724099.878],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:39"],"user":["Burhan Hodzic"],"umph":[1652724099.9082],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:39"],"user":["Burhan Hodzic"],"umph":[1652724099.9344],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n\"nein\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:42"],"user":["Burhan Hodzic"],"umph":[1652724102.907],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["thp <- read_csv(\"./data/THP_clean.csv\") %>%\n  select(newid, uc, depressed_1y, treat, age_baseline, age_baseline_sq, kids_no, famstruct_baseline, grandmother_baseline, edu_mo, edu_fa, employed_mo_baseline, incomeindex, depindex_0, mspss_tot)\n\nskim(thp)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:43"],"user":["Burhan Hodzic"],"umph":[1652724103.2462],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["thp_plots <- thp %>%\n  mutate(treat_factor = as.factor(ifelse(treat == 1 , \"Treatment\", \"Kontrolle\")),\n         depressed = as.factor(ifelse(depressed_1y == 0, \"keine Depressionen\", \"Depressionen\"))) %>%\n  filter( !is.na(depressed))\n\nplot_prop_depression <- ggplot(thp_plots, aes(x = depressed, fill = treat_factor)) +\n  geom_bar(position = \"fill\") +\n  labs(x = NULL, y = \"Anteil an Depressionen\", fill = NULL) +\n  scale_fill_manual(values = c(\"darkblue\", \"darkred\"))\n\nplot_prop_depression\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:43"],"user":["Burhan Hodzic"],"umph":[1652724103.27],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["\n\"ja\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:43"],"user":["Burhan Hodzic"],"umph":[1652724103.6877],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["\n\"unterschätzen\"\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:43"],"user":["Burhan Hodzic"],"umph":[1652724103.8568],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["thp %>% \n  pivot_longer(cols = -treat, names_to = \"variable\", values_to = \"value\") %>%\n  group_nest(variable) %>%\n  mutate(t.test = map(data, ~tidy(t.test(value ~ treat, data = .x)))) %>%\n  unnest(t.test) %>%\n  mutate( Mean_Treatment = round(estimate2, 2),\n          Mean_Kontrolle = round(estimate1, 2),\n    Differenz = round(estimate, 4),\n          Signifikanz = round(p.value,4)) %>%\n  select(variable, Mean_Treatment, Mean_Kontrolle, Differenz, Signifikanz)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:43"],"user":["Burhan Hodzic"],"umph":[1652724103.88],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:43"],"user":["Burhan Hodzic"],"umph":[1652724103.956],"ok":[true],"chunk":[9],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(depressed_1y ~ treat, data=thp)\nreg2 <- lm(depressed_1y ~ treat + depindex_0, data=thp)\n\nreg3 <- lm(depressed_1y ~ treat + depindex_0 + age_baseline + age_baseline_sq + kids_no + famstruct_baseline + grandmother_baseline + edu_mo + edu_fa + employed_mo_baseline + incomeindex + mspss_tot, data=thp)\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:44"],"user":["Burhan Hodzic"],"umph":[1652724104.9531],"ok":[true],"chunk":[10],"ex":[1],"e.ind":[0],"code":["stargazer( reg1, reg2, reg3 ,type = \"text\",  digits=2, omit.stat = c(\"f\",\"ser\"))"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:44"],"user":["Burhan Hodzic"],"umph":[1652724104.976],"ok":[true],"chunk":[11],"ex":[1],"e.ind":[0],"code":["\nc(2,4)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:45"],"user":["Burhan Hodzic"],"umph":[1652724105.0063],"ok":[true],"chunk":[12],"ex":[1],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:48"],"user":["Burhan Hodzic"],"umph":[1652724108.0967],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\nlibrary(AER)\ndata(Fertility)\nhead(Fertility)\nskim(Fertility)\n\nFertility\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:48"],"user":["Burhan Hodzic"],"umph":[1652724108.1208],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:49"],"user":["Burhan Hodzic"],"umph":[1652724109.0789],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["Fertility <- Fertility %>%\n  mutate(work01 = case_when(work > 0 ~ 1,\n                            work == 0 ~ 0))\n\nreg1 <- lm(work01 ~ morekids, data=Fertility )\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:49"],"user":["Burhan Hodzic"],"umph":[1652724109.1059],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:50"],"user":["Burhan Hodzic"],"umph":[1652724110.1815],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["grViz('digraph G {\n\nx [label=\"erklärende Variable x\"]\ny [label=\"abhängige Variable y\"]\nz [label=\"Instrument z\"]\n\nx -> y [label=\"+\"];\nz -> x [label=\"+\"];\nz -> y [label=\"+\"];\n}')"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:50"],"user":["Burhan Hodzic"],"umph":[1652724110.3096],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["grViz('digraph G {\n\nx [label=\"erklärende Variable x\"]\ny [label=\"abhängige Variable y\"]\nz [label=\"Instrument z\"]\n\nx -> y [label=\"-\"];\nz -> y [label=\"+\"];\n}')"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:50"],"user":["Burhan Hodzic"],"umph":[1652724110.3991],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["grViz('digraph G {\n\nx [label=\"erklärende Variable x\"]\ny [label=\"abhängige Variable y\"]\nz [label=\"Instrument z\"]\n\nx -> y [label=\"-\"];\nz -> x [label=\"+\"];\n}')"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:50"],"user":["Burhan Hodzic"],"umph":[1652724110.4311],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:52"],"user":["Burhan Hodzic"],"umph":[1652724112.8133],"ok":[true],"chunk":[21],"ex":[2],"e.ind":[0],"code":["Fertility <- Fertility %>%\n  mutate(morekids = ifelse(morekids== \"yes\", 1, 0)) %>%\n  mutate(afam = ifelse(afam== \"yes\", 1, 0)) %>%\n  mutate(same_sex = ifelse(gender1== gender2, 1, 0))\n  \nreg1 <-  Fertility %>%\n  lm(morekids ~ gender2, data=.)\n\nreg2 <- Fertility %>%\n  lm(morekids ~ afam, data=.)\n\n reg3 <- Fertility %>%\n  lm(morekids ~ same_sex, data=.)\n\n stargazer(reg1, reg2, reg3, type = \"text\", digits=3)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:52"],"user":["Burhan Hodzic"],"umph":[1652724112.8379],"ok":[true],"chunk":[22],"ex":[2],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:53"],"user":["Burhan Hodzic"],"umph":[1652724113.9222],"ok":[true],"chunk":[23],"ex":[2],"e.ind":[0],"code":["\nivreg(work01 ~ morekids | same_sex, data = Fertility) %>% \n  summary(diagnostics=TRUE)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:54"],"user":["Burhan Hodzic"],"umph":[1652724114.2118],"ok":[true],"chunk":[24],"ex":[2],"e.ind":[0],"code":["\nivreg(work01 ~ morekids | same_sex, data = Fertility) %>% \n  summary()\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:54"],"user":["Burhan Hodzic"],"umph":[1652724114.2321],"ok":[true],"chunk":[25],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-16 20:01:54"],"user":["Burhan Hodzic"],"umph":[1652724114.2691],"ok":[true],"chunk":[26],"ex":[2],"e.ind":[0],"code":["\nc(1,2,3)\n"],"message":[""]}
+,
