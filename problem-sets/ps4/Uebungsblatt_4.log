@@ -1,0 +1,344 @@
+{"type":["init_ps"],"time":["2022-05-02 21:19:06"],"user":["Burhan Hodzic"],"umph":[1651519146.6583],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:19:06"],"user":["Burhan Hodzic"],"umph":[1651519146.7593],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)\nlibrary(RTutor)\nlibrary(\"tidyverse\")\nlibrary(\"lubridate\")\nlibrary(\"readxl\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:19:07"],"user":["Burhan Hodzic"],"umph":[1651519147.0844],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["eu_makro <- read_csv(\"data/EU_Makro.csv\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:19:07"],"user":["Burhan Hodzic"],"umph":[1651519147.5192],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:19:07"],"user":["Burhan Hodzic"],"umph":[1651519147.5582],"ok":[false],"chunk":[4],"ex":[1],"e.ind":[1],"code":["reg1 <- lm(.PH_._~debt_share_country_pro, data=.PH_._)\nsummary(.PH_._)\n\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 1_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:19:41"],"user":["Burhan Hodzic"],"umph":[1651519181.3199],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:19:41"],"user":["Burhan Hodzic"],"umph":[1651519181.3509],"ok":[false],"chunk":[4],"ex":[1],"e.ind":[1],"code":["reg1 <- lm(.PH_._~debt_share_country_pro, data=.PH_._)\nsummary(.PH_._)\n\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 1_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:20:32"],"user":["Burhan Hodzic"],"umph":[1651519232.3444],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:20:32"],"user":["Burhan Hodzic"],"umph":[1651519232.3764],"ok":[false],"chunk":[4],"ex":[1],"e.ind":[1],"code":["reg1 <- lm(.PH_._~debt_share_country_pro, data=.PH_._)\nsummary(.PH_._)\n\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 1_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:26:23"],"user":["Burhan Hodzic"],"umph":[1651519583.3913],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:26:23"],"user":["Burhan Hodzic"],"umph":[1651519583.4421],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl~debt_share_country_pro, data=eu_makro)\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:26:23"],"user":["Burhan Hodzic"],"umph":[1651519583.4741],"ok":[false],"chunk":[5],"ex":[1],"e.ind":[1],"code":["\n6.894\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_c."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:27:01"],"user":["Burhan Hodzic"],"umph":[1651519621.1243],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:27:01"],"user":["Burhan Hodzic"],"umph":[1651519621.1513],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:27:01"],"user":["Burhan Hodzic"],"umph":[1651519621.1873],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_d."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:29:21"],"user":["Burhan Hodzic"],"umph":[1651519761.6385],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:29:21"],"user":["Burhan Hodzic"],"umph":[1651519761.6925],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["\ncoef(reg1)\n\nb0 <- coef(reg1)[1]\n\nb1 <- coef(reg1)[2]\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:29:21"],"user":["Burhan Hodzic"],"umph":[1651519761.7145],"ok":[false],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=.PH_._,slope=.PH_._,colour=\".PH_._\")\n\n# enter your code here ...\n\ng2"],"message":["evaluation error in \n  g2 <- g1 + geom_abline(intercept = ___, slope = ___, colour = \"___\")\n  Error in geom_abline(intercept = ___, slope = ___, colour = \"___\"): object '___' not found\n"]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:30:20"],"user":["Burhan Hodzic"],"umph":[1651519820.5261],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:30:20"],"user":["Burhan Hodzic"],"umph":[1651519820.9351],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope=b1,colour=\"blue\")\n\n\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:30:20"],"user":["Burhan Hodzic"],"umph":[1651519820.9531],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:32:27"],"user":["Burhan Hodzic"],"umph":[1651519947.4378],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:32:27"],"user":["Burhan Hodzic"],"umph":[1651519947.4748],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\nlm(unempl~debt_share_country_pro,data=eu_makro)\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:35:01"],"user":["Burhan Hodzic"],"umph":[1651520101.463],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:35:01"],"user":["Burhan Hodzic"],"umph":[1651520101.505],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["\ncor(eu_makro$unempl,eu_makro$debt_share_country,use = \"pairwise.complete.obs\" )\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:35:01"],"user":["Burhan Hodzic"],"umph":[1651520101.621],"ok":[true],"chunk":[9],"ex":[2],"e.ind":[0],"code":["set.seed(1)\nT <-  20 # Zahl der Beobachtungen\nbeta0 <- 10; beta1 <- 2;\nu <- rnorm(T,0,3) # Normalverteilte Stoergroesse\nu\nx <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\nx\ny <- beta0 + beta1*x + u\ny"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:35:01"],"user":["Burhan Hodzic"],"umph":[1651520101.68],"ok":[false],"chunk":[10],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:36:32"],"user":["Burhan Hodzic"],"umph":[1651520192.3882],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:36:32"],"user":["Burhan Hodzic"],"umph":[1651520192.6442],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope=b1,colour=\"blue\")\n\n\ng2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:36:32"],"user":["Burhan Hodzic"],"umph":[1651520192.6622],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["\ncor(eu_makro$unempl,eu_makro$debt_share_country,use = \"pairwise.complete.obs\" )\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:36:32"],"user":["Burhan Hodzic"],"umph":[1651520192.6822],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:36:32"],"user":["Burhan Hodzic"],"umph":[1651520192.7032],"ok":[false],"chunk":[11],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_3."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:37:35"],"user":["Burhan Hodzic"],"umph":[1651520255.4952],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:37:35"],"user":["Burhan Hodzic"],"umph":[1651520255.5443],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["\nlm(y~x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:37:35"],"user":["Burhan Hodzic"],"umph":[1651520255.5743],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:37:35"],"user":["Burhan Hodzic"],"umph":[1651520255.6083],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:38:29"],"user":["Burhan Hodzic"],"umph":[1651520309.8372],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:38:29"],"user":["Burhan Hodzic"],"umph":[1651520309.8682],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:38:29"],"user":["Burhan Hodzic"],"umph":[1651520309.8872],"ok":[false],"chunk":[14],"ex":[2],"e.ind":[0],"code":[".PH_.__ <- .PH_.__(.PH_.__,simulate.and.estimate())\n\n# enter your code here ...\n"],"message":["evaluation error in \n  ____ <- ____(____, simulate.and.estimate())\n  Error in ____(____, simulate.and.estimate()): could not find function \"____\"\n"]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:39:47"],"user":["Burhan Hodzic"],"umph":[1651520387.6427],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:39:48"],"user":["Burhan Hodzic"],"umph":[1651520388.5547],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000,simulate.and.estimate())\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:39:48"],"user":["Burhan Hodzic"],"umph":[1651520388.6117],"ok":[false],"chunk":[15],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_c_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:45:20"],"user":["Burhan Hodzic"],"umph":[1651520720.5877],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:45:20"],"user":["Burhan Hodzic"],"umph":[1651520720.6597],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["\nhist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:45:20"],"user":["Burhan Hodzic"],"umph":[1651520720.9407],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:45:20"],"user":["Burhan Hodzic"],"umph":[1651520720.9657],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["\nsd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:45:21"],"user":["Burhan Hodzic"],"umph":[1651520721.2367],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["reg1 <-  lm(y~x)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:45:21"],"user":["Burhan Hodzic"],"umph":[1651520721.2637],"ok":[false],"chunk":[19],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_f."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:49:06"],"user":["Burhan Hodzic"],"umph":[1651520946.0614],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:49:08"],"user":["Burhan Hodzic"],"umph":[1651520948.0464],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:49:08"],"user":["Burhan Hodzic"],"umph":[1651520948.4024],"ok":[true],"chunk":[21],"ex":[3],"e.ind":[0],"code":["eu_makro <- read_csv(\"./data/EU_Makro.csv\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:49:08"],"user":["Burhan Hodzic"],"umph":[1651520948.7864],"ok":[true],"chunk":[22],"ex":[3],"e.ind":[0],"code":["eu_makro <-  eu_makro %>%\n  group_by(country) %>%\n  arrange(year) %>%\n  mutate(gdp_growth = 100*(gdp - lag(gdp)) / gdp ) %>%\n  ungroup()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:49:08"],"user":["Burhan Hodzic"],"umph":[1651520948.8084],"ok":[false],"chunk":[23],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to dat in chunk 3_a_3."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 21:52:33"],"user":["Burhan Hodzic"],"umph":[1651521153.7242],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:52:33"],"user":["Burhan Hodzic"],"umph":[1651521153.7662],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["\nconfint(reg1,level = 0.95)\n\n\nconfint(reg1,level = 0.99)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:52:34"],"user":["Burhan Hodzic"],"umph":[1651521154.0062],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 21:52:34"],"user":["Burhan Hodzic"],"umph":[1651521154.0222],"ok":[false],"chunk":[23],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to dat in chunk 3_a_3."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:00:25"],"user":["Burhan Hodzic"],"umph":[1651521625.5204],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:00:25"],"user":["Burhan Hodzic"],"umph":[1651521625.5494],"ok":[false],"chunk":[23],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to dat in chunk 3_a_3."]}
+,
+{"type":["hint"],"time":["2022-05-02 22:08:41"],"user":["Burhan Hodzic"],"umph":[1651522121.3025],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2022-05-02 22:10:26"],"user":["Burhan Hodzic"],"umph":[1651522226.3503],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:11:14"],"user":["Burhan Hodzic"],"umph":[1651522274.878],"ok":[true]}
+,
+{"type":["hint"],"time":["2022-05-02 22:11:14"],"user":["Burhan Hodzic"],"umph":[1651522274.948],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:11:15"],"user":["Burhan Hodzic"],"umph":[1651522275.035],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0],"code":["\ndat <- filter(eu_makro, country %in% c(\"France\", \"Germany\", \"Netherlands\"))\n              hint()\n\ndat\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:11:15"],"user":["Burhan Hodzic"],"umph":[1651522275.058],"ok":[false],"chunk":[24],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg1 in chunk 3_a_4."]}
+,
+{"type":["hint"],"time":["2022-05-02 22:12:37"],"user":["Burhan Hodzic"],"umph":[1651522357.3519],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2022-05-02 22:12:47"],"user":["Burhan Hodzic"],"umph":[1651522367.9023],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2022-05-02 22:13:07"],"user":["Burhan Hodzic"],"umph":[1651522387.2457],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:13:11"],"user":["Burhan Hodzic"],"umph":[1651522391.6502],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:13:11"],"user":["Burhan Hodzic"],"umph":[1651522391.7312],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0],"code":["\ndat <- filter(eu_makro, country %in% c(\"France\", \"Germany\", \"Netherlands\"))\n\ndat\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:13:11"],"user":["Burhan Hodzic"],"umph":[1651522391.7552],"ok":[false],"chunk":[24],"ex":[3],"e.ind":[1],"code":["\nreg1 <- lm (unempl ~ dat)\n\nsummary(reg1)\n\nhint()\n\n# enter your code here ...\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 3_a_4."]}
+,
+{"type":["hint"],"time":["2022-05-02 22:13:16"],"user":["Burhan Hodzic"],"umph":[1651522396.9907],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:18:18"],"user":["Burhan Hodzic"],"umph":[1651522698.7188],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:18:18"],"user":["Burhan Hodzic"],"umph":[1651522698.7658],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[0],"code":["\nreg1 <- lm (unempl ~ gdp_growth, data=dat)\n\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:18:18"],"user":["Burhan Hodzic"],"umph":[1651522698.7858],"ok":[false],"chunk":[25],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_a_5."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:21:20"],"user":["Burhan Hodzic"],"umph":[1651522880.0926],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:21:20"],"user":["Burhan Hodzic"],"umph":[1651522880.1226],"ok":[true],"chunk":[25],"ex":[3],"e.ind":[0],"code":["1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:21:20"],"user":["Burhan Hodzic"],"umph":[1651522880.1436],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:21:43"],"user":["Burhan Hodzic"],"umph":[1651522903.7092],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:21:43"],"user":["Burhan Hodzic"],"umph":[1651522903.7402],"ok":[true],"chunk":[25],"ex":[3],"e.ind":[0],"code":["\n1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:21:43"],"user":["Burhan Hodzic"],"umph":[1651522903.7643],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["hint"],"time":["2022-05-02 22:22:05"],"user":["Burhan Hodzic"],"umph":[1651522925.9063],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:24:01"],"user":["Burhan Hodzic"],"umph":[1651523041.7472],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:24:01"],"user":["Burhan Hodzic"],"umph":[1651523041.7732],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["\n2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:24:09"],"user":["Burhan Hodzic"],"umph":[1651523049.6572],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:24:09"],"user":["Burhan Hodzic"],"umph":[1651523049.6847],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["\n1\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:24:17"],"user":["Burhan Hodzic"],"umph":[1651523057.3892],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:24:17"],"user":["Burhan Hodzic"],"umph":[1651523057.4193],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:24:17"],"user":["Burhan Hodzic"],"umph":[1651523057.4403],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:24:49"],"user":["Burhan Hodzic"],"umph":[1651523089.5645],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:24:49"],"user":["Burhan Hodzic"],"umph":[1651523089.6035],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\n2"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:25:00"],"user":["Burhan Hodzic"],"umph":[1651523100.1626],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:25:00"],"user":["Burhan Hodzic"],"umph":[1651523100.1956],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\n1"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:25:10"],"user":["Burhan Hodzic"],"umph":[1651523110.6184],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:25:10"],"user":["Burhan Hodzic"],"umph":[1651523110.6604],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\n3"],"message":["\nOk, in chunk 3_b_2 your command\n\n    3\n\nindeed yields the correct result. But you shall solve this task instead by using the function 'c'."]}
+,
+{"type":["hint"],"time":["2022-05-02 22:25:57"],"user":["Burhan Hodzic"],"umph":[1651523157.6871],"ok":[true],"chunk":[27],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:26:14"],"user":["Burhan Hodzic"],"umph":[1651523174.3149],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:26:14"],"user":["Burhan Hodzic"],"umph":[1651523174.3459],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\nc(1,2)"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:26:25"],"user":["Burhan Hodzic"],"umph":[1651523185.3455],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:26:25"],"user":["Burhan Hodzic"],"umph":[1651523185.3955],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\nc(1)"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:26:35"],"user":["Burhan Hodzic"],"umph":[1651523195.6544],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:26:35"],"user":["Burhan Hodzic"],"umph":[1651523195.6834],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\nc(1,2,3)"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:26:57"],"user":["Burhan Hodzic"],"umph":[1651523217.1209],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:26:57"],"user":["Burhan Hodzic"],"umph":[1651523217.1458],"ok":[true],"chunk":[27],"ex":[3],"e.ind":[0],"code":["\nc(3)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:26:57"],"user":["Burhan Hodzic"],"umph":[1651523217.5179],"ok":[true],"chunk":[28],"ex":[3],"e.ind":[0],"code":["reg2 <- lm(unempl~gdp_growth, data=eu_makro)\nstargazer(type = \"text\", reg2 ,  single.row = TRUE, header = FALSE, digits=2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:26:57"],"user":["Burhan Hodzic"],"umph":[1651523217.5369],"ok":[false],"chunk":[29],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_c_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:29:53"],"user":["Burhan Hodzic"],"umph":[1651523393.8975],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:29:53"],"user":["Burhan Hodzic"],"umph":[1651523393.9558],"ok":[true],"chunk":[29],"ex":[3],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:29:53"],"user":["Burhan Hodzic"],"umph":[1651523393.9808],"ok":[false],"chunk":[30],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_d."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:30:38"],"user":["Burhan Hodzic"],"umph":[1651523438.2226],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:30:38"],"user":["Burhan Hodzic"],"umph":[1651523438.2476],"ok":[false],"chunk":[30],"ex":[3],"e.ind":[1],"code":["\n2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_d."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:30:56"],"user":["Burhan Hodzic"],"umph":[1651523456.1183],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:30:56"],"user":["Burhan Hodzic"],"umph":[1651523456.1453],"ok":[true],"chunk":[30],"ex":[3],"e.ind":[0],"code":["\n4\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:30:56"],"user":["Burhan Hodzic"],"umph":[1651523456.1864],"ok":[true],"chunk":[31],"ex":[4],"e.ind":[0],"code":["pwt <- readRDS(\"./data/pwt_2014.rds\")\nhead(pwt)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:30:56"],"user":["Burhan Hodzic"],"umph":[1651523456.2084],"ok":[false],"chunk":[32],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg1 in chunk 4_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:33:53"],"user":["Burhan Hodzic"],"umph":[1651523633.9989],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:33:54"],"user":["Burhan Hodzic"],"umph":[1651523634.0399],"ok":[false],"chunk":[32],"ex":[4],"e.ind":[2],"code":["\nreg1 <- lm(bip ~ k, data=pwt)\n\nreg1\n"],"message":["\nYou have not yet entered all correct commands in chunk 4_b."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:34:12"],"user":["Burhan Hodzic"],"umph":[1651523652.3353],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:34:12"],"user":["Burhan Hodzic"],"umph":[1651523652.3793],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[0],"code":["\nreg1 <- lm(bip ~ k, data=pwt)\n\nreg1\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:34:12"],"user":["Burhan Hodzic"],"umph":[1651523652.4003],"ok":[false],"chunk":[33],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 4_b_2."]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:35:58"],"user":["Burhan Hodzic"],"umph":[1651523758.2563],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:35:58"],"user":["Burhan Hodzic"],"umph":[1651523758.2823],"ok":[true],"chunk":[33],"ex":[4],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:35:58"],"user":["Burhan Hodzic"],"umph":[1651523758.4953],"ok":[true],"chunk":[34],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=k,y=bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:35:58"],"user":["Burhan Hodzic"],"umph":[1651523758.5173],"ok":[false],"chunk":[35],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to pwt in chunk 4_d."]}
+,
+{"type":["hint"],"time":["2022-05-02 22:41:09"],"user":["Burhan Hodzic"],"umph":[1651524069.5404],"ok":[true],"chunk":[35],"ex":[4],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2022-05-02 22:41:21"],"user":["Burhan Hodzic"],"umph":[1651524081.3765],"ok":[true],"chunk":[35],"ex":[4],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:45:46"],"user":["Burhan Hodzic"],"umph":[1651524346.3077],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:45:46"],"user":["Burhan Hodzic"],"umph":[1651524346.3487],"ok":[true],"chunk":[35],"ex":[4],"e.ind":[0],"code":["\npwt <- pwt %>% \n  mutate(log_bip=log(bip)) %>% \n           mutate(log_k=log(k))\n        "],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:45:47"],"user":["Burhan Hodzic"],"umph":[1651524347.1637],"ok":[true],"chunk":[36],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=log_k,y=log_bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:45:47"],"user":["Burhan Hodzic"],"umph":[1651524347.2037],"ok":[true],"chunk":[37],"ex":[4],"e.ind":[0],"code":["\nreg2 <- lm (log_bip ~ log_k, data=pwt)\n\nsummary(reg2)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:45:47"],"user":["Burhan Hodzic"],"umph":[1651524347.2357],"ok":[true],"chunk":[38],"ex":[4],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_ps"],"time":["2022-05-02 22:47:08"],"user":["Burhan Hodzic"],"umph":[1651524428.2032],"ok":[true]}
+,
+{"type":["grade_ps"],"time":["2022-05-02 22:47:24"],"user":["Burhan Hodzic"],"umph":[1651524444.5625],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2022-05-02 22:47:24"],"user":["Burhan Hodzic"],"umph":[1651524444.5991],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:24"],"user":["Burhan Hodzic"],"umph":[1651524444.6181],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)\nlibrary(RTutor)\nlibrary(\"tidyverse\")\nlibrary(\"lubridate\")\nlibrary(\"readxl\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:24"],"user":["Burhan Hodzic"],"umph":[1651524444.8471],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["eu_makro <- read_csv(\"data/EU_Makro.csv\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.1378],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.1638],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl~debt_share_country_pro, data=eu_makro)\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.1798],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.2138],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["\ncoef(reg1)\n\nb0 <- coef(reg1)[1]\n\nb1 <- coef(reg1)[2]\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.5448],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope=b1,colour=\"blue\")\n\n\ng2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.5678],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["\ncor(eu_makro$unempl,eu_makro$debt_share_country,use = \"pairwise.complete.obs\" )\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.6569],"ok":[true],"chunk":[9],"ex":[2],"e.ind":[0],"code":["set.seed(1)\nT <-  20 # Zahl der Beobachtungen\nbeta0 <- 10; beta1 <- 2;\nu <- rnorm(T,0,3) # Normalverteilte Stoergroesse\nu\nx <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\nx\ny <- beta0 + beta1*x + u\ny"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.6759],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:25"],"user":["Burhan Hodzic"],"umph":[1651524445.6999],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["\nlm(y~x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:26"],"user":["Burhan Hodzic"],"umph":[1651524446.0699],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:26"],"user":["Burhan Hodzic"],"umph":[1651524446.0869],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:26"],"user":["Burhan Hodzic"],"umph":[1651524446.9679],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000,simulate.and.estimate())\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:27"],"user":["Burhan Hodzic"],"umph":[1651524447.0309],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["\nhist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:27"],"user":["Burhan Hodzic"],"umph":[1651524447.2969],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:27"],"user":["Burhan Hodzic"],"umph":[1651524447.3119],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["\nsd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:27"],"user":["Burhan Hodzic"],"umph":[1651524447.3369],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["reg1 <-  lm(y~x)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:27"],"user":["Burhan Hodzic"],"umph":[1651524447.3649],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["\nconfint(reg1,level = 0.95)\n\n\nconfint(reg1,level = 0.99)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:27"],"user":["Burhan Hodzic"],"umph":[1651524447.635],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:27"],"user":["Burhan Hodzic"],"umph":[1651524447.94],"ok":[true],"chunk":[21],"ex":[3],"e.ind":[0],"code":["eu_makro <- read_csv(\"./data/EU_Makro.csv\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.308],"ok":[true],"chunk":[22],"ex":[3],"e.ind":[0],"code":["eu_makro <-  eu_makro %>%\n  group_by(country) %>%\n  arrange(year) %>%\n  mutate(gdp_growth = 100*(gdp - lag(gdp)) / gdp ) %>%\n  ungroup()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.369],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0],"code":["\ndat <- filter(eu_makro, country %in% c(\"France\", \"Germany\", \"Netherlands\"))\n\ndat\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.405],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[0],"code":["\nreg1 <- lm (unempl ~ gdp_growth, data=dat)\n\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.425],"ok":[true],"chunk":[25],"ex":[3],"e.ind":[0],"code":["\n1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.443],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.46],"ok":[true],"chunk":[27],"ex":[3],"e.ind":[0],"code":["\nc(3)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.785],"ok":[true],"chunk":[28],"ex":[3],"e.ind":[0],"code":["reg2 <- lm(unempl~gdp_growth, data=eu_makro)\nstargazer(type = \"text\", reg2 ,  single.row = TRUE, header = FALSE, digits=2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.8],"ok":[true],"chunk":[29],"ex":[3],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.816],"ok":[true],"chunk":[30],"ex":[3],"e.ind":[0],"code":["\n4\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.877],"ok":[true],"chunk":[31],"ex":[4],"e.ind":[0],"code":["pwt <- readRDS(\"./data/pwt_2014.rds\")\nhead(pwt)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.911],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[0],"code":["\nreg1 <- lm(bip ~ k, data=pwt)\n\nreg1\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:28"],"user":["Burhan Hodzic"],"umph":[1651524448.926],"ok":[true],"chunk":[33],"ex":[4],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:29"],"user":["Burhan Hodzic"],"umph":[1651524449.1425],"ok":[true],"chunk":[34],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=k,y=bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:29"],"user":["Burhan Hodzic"],"umph":[1651524449.1765],"ok":[true],"chunk":[35],"ex":[4],"e.ind":[0],"code":["\npwt <- pwt %>% \n  mutate(log_bip=log(bip)) %>% \n           mutate(log_k=log(k))\n        "],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:29"],"user":["Burhan Hodzic"],"umph":[1651524449.4665],"ok":[true],"chunk":[36],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=log_k,y=log_bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:29"],"user":["Burhan Hodzic"],"umph":[1651524449.4915],"ok":[true],"chunk":[37],"ex":[4],"e.ind":[0],"code":["\nreg2 <- lm (log_bip ~ log_k, data=pwt)\n\nsummary(reg2)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2022-05-02 22:47:29"],"user":["Burhan Hodzic"],"umph":[1651524449.5075],"ok":[true],"chunk":[38],"ex":[4],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
